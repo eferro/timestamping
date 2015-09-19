@@ -18,8 +18,16 @@ func match(line string, exps [](*regexp.Regexp)) bool {
 	return false
 }
 
+func usage() {
+     fmt.Println("command | timestamping regexp [regexp] ...")
+}
+
 func main() {
 	args := os.Args[1:]
+	if len(args) == 0 {
+	   usage()
+	   return
+	}
 
 	t := time.Now()
 
