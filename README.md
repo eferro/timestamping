@@ -11,4 +11,4 @@ It can be used to obtain the time consumed by each step of a command line tool t
 # Notes
 EOF not defected ok using go version prior to 1.5
 
-(https://github.com/golang/go/commit/fd5b8aa7999e6710e14f4798dcb9e9387247511d)[Bugfix at 1.5]
+(Bugfix at 1.5)[https://github.com/golang/go/commit/fd5b8aa7999e6710e14f4798dcb9e9387247511d]
