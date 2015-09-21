@@ -19,14 +19,14 @@ func match(line string, exps [](*regexp.Regexp)) bool {
 }
 
 func usage() {
-     fmt.Println("command | timestamping regexp [regexp] ...")
+	fmt.Println("command | timestamping regexp [regexp] ...")
 }
 
 func main() {
 	args := os.Args[1:]
 	if len(args) == 0 {
-	   usage()
-	   return
+		usage()
+		return
 	}
 
 	t := time.Now()
@@ -47,7 +47,7 @@ func main() {
 		if match(line, exps) {
 			last := t
 			t = time.Now()
-			fmt.Println("secs", fmt.Sprintf("%.2f", t.Sub(last).Seconds()), line)
+			fmt.Println(time.Now().Unix(), "secs", fmt.Sprintf("%.2f", t.Sub(last).Seconds()), line)
 		} else {
 			fmt.Println(line)
 		}
